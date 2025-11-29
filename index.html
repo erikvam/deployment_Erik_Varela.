@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo de Combustible</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⛽ Calculadora de Consumo</h1>
+        
+        <div class="input-section">
+            <label for="kmRecorridos">Kilómetros Recorridos (km):</label>
+            <input type="number" id="kmRecorridos" min="0" value="100">
+
+            <label for="litrosConsumidos">Litros Consumidos (l):</label>
+            <input type="number" id="litrosConsumidos" min="0.1" value="8">
+
+            <label for="precioLitro">Precio por Litro ($):</label>
+            <input type="number" id="precioLitro" min="0.1" value="4500">
+
+            <button onclick="calcularConsumo()">Calcular Viaje</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Resultados del Viaje</h2>
+            <p>Consumo Promedio: <span id="consumoPromedio">--</span></p>
+            <p>Costo por Kilómetro: <span id="costoKm">--</span></p>
+            <p>Costo Total del Viaje: <span id="costoTotal">--</span></p>
+        </div>
+
+        <div class="comparador-section">
+            <h2>Comparador de Precios</h2>
+            <div id="comparadorResultados">
+                <p class="initial-msg">Ingresa los datos para ver la comparación.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
